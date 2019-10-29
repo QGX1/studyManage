@@ -1,5 +1,3 @@
-<!--BY：吴玉梅 功能:搜索、图书资讯、笔记社区、收藏笔记-->
-
 <template>
 <div style="margin-top:50px">
 <div id ="search" style="width:100%">

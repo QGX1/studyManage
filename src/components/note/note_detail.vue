@@ -1,4 +1,3 @@
-<!--吴玉梅 功能：查看笔记详情-->
 <template>
 <div>
     <div id="header">

@@ -1,5 +1,3 @@
-<!--By：吴玉梅 功能：关键字搜索-->
-
 <template>
 <div id="searh" style="margin-top:70px">
   <div id="header">

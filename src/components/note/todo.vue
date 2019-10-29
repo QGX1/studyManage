@@ -1,5 +1,3 @@
-<!--By：吴玉梅 功能：添加与删除待办事项-->
-
 <template>
 <div id="note">
   <div id="header">

@@ -1,4 +1,3 @@
-<!--By：吴玉梅 功能:查看图书详情-->
 <template>
     <div id="detail">
     <div id="header">

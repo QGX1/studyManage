@@ -1,4 +1,3 @@
-<!--By：吴玉梅 功能：底部导航-->
 <template>
     <div id="tab" class="nav">
         <ul>

@@ -1,4 +1,3 @@
-<!-- by:江健霞-->
 <template>
 <div>
     <div id="header">
@@ -120,7 +119,7 @@
         }
         reader.readAsDataURL(file)
 
-        // 将图片上传到后台（丘桂娴）
+        // 将图片上传到后台
         this.file = event.target.files[0]; //获取input的图片file值
         let param = new FormData(); // 创建form对象
         param.append('imgFile', this.file);//对应后台接收图片名
@@ -136,8 +135,6 @@
           // 修改个人信息返回的数据
         });
       },
-    
-  // 修改我的个人信息数据，江健霞写、丘桂娴改
 			submit: function (){
         // 更改用户信息传递的数据
         let postData= this.$qs.stringify({

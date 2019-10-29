@@ -1,4 +1,3 @@
-<!--autor:刘炽辉-->      <!--后台管理员界面-->  
 <template>
   <div>
     <div v-show=!isAddShow>
@@ -113,7 +112,7 @@
 export default {
   inject: ["reload"],
   data() {
-     //自定义表单验证规则（黄昌壹）
+     //自定义表单验证规则
     var validatePass = (rule, value, callback) => {
       //验证密码
       // alert(value);
@@ -226,7 +225,7 @@ export default {
     };
   },
   methods: {
-    handleEdit(index, row) {//显示编辑表单组件（黄昌壹）
+    handleEdit(index, row) {//显示编辑表单组件
       this.form.id = row.user_id;
       this.form.name = row.user.user_name;
       this.form.sex = row.user.sex;
@@ -236,7 +235,7 @@ export default {
       // alert('编辑' + index, row);
     },
     handleDelete(index, row) {
-      //删除管理员（黄昌壹）
+      //删除管理员
       console.log("删除" + row.user.user_id + row.user.sex + row.user.email);
       this.$store
         .dispatch("doDeleteAdmin", {
@@ -251,7 +250,7 @@ export default {
         .catch(e => {});
     },
     onSubmit() {
-      //提交修改管理员信息的表单（黄昌壹）
+      //提交修改管理员信息的表单
       this.$store
         .dispatch("doEditAdminInfo", {
           formInfo: this.form
@@ -262,7 +261,7 @@ export default {
         })
         .catch(e => {});
     },
-    doCancel() {//取消修改操作（黄昌壹）
+    doCancel() {//取消修改操作
       this.isShow = false;
       this.form.name = "";
       this.form.sex = "";
@@ -271,7 +270,7 @@ export default {
     doAdd() {//显示添加管理员的表单组件
       this.isAddShow = true;
     },
-    doAddCancel() {//取消添加管理员操作（黄昌壹）
+    doAddCancel() {//取消添加管理员操作
       this.$refs["form"].clearValidate(); // 清除整个表单的校验
       this.isAddShow = false;
       this.form.name = "";
@@ -281,7 +280,7 @@ export default {
       this.form.repassword = "";
     },
     doAddSubmit() {
-      //增加管理员（黄昌壹）
+      //增加管理员
       this.$store
         .dispatch("doAddAdmin", {
           formInfo: this.form
@@ -297,7 +296,7 @@ export default {
       // this.isAddShow = false;
     }
   },
-  created() {//获取管理员信息（黄昌壹）
+  created() {//获取管理员信息
     this.$store
       .dispatch("getAdminInfo")
       .then(res => {

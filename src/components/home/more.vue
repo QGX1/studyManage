@@ -1,5 +1,3 @@
-<!--By：吴玉梅 功能:查看更多图书内容-->
-
 <template>
     <div id="more" style="margin-top:50px">
       <div id="header">

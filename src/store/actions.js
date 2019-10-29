@@ -18,7 +18,7 @@ import {
 import user from "./modules/user";
 
 export default {
-  // 登录(丘桂娴)
+  // 登录
   toLogin({ commit }, info) {
     return new Promise((resolve, reject) => {
       login(info)
@@ -37,7 +37,7 @@ export default {
               Authorization: "hr " + window.sessionStorage.getItem("token")
             };
 
-            // console.log("丘桂娴全局变量")
+
             console.log(res);
             resolve(res);
           }
@@ -48,7 +48,7 @@ export default {
     });
   },
 
-  // 注册成功后台返回状态以及token，修改登录状态（丘桂娴）
+  // 注册成功后台返回状态以及token，修改登录状态
   toRegister({ commit }, info) {
     return new Promise((resolve, reject) => {
       register(info)
@@ -74,7 +74,7 @@ export default {
     });
   },
 
-  // 邮箱检测后台请求以及响应前端处理（丘桂娴）
+  // 邮箱检测后台请求以及响应前端处理
   tocheckEmail({ commit }, info) {
     return new Promise((resolve, reject) => {
       checkEmail(info)
@@ -94,7 +94,6 @@ export default {
     return new Promise((resolve, reject) => {
       getUserInfo()
         .then(res => {
-          console.log("检测进入home页面的图书数据（丘桂娴）");
           // console.log(res.data.lists);
           if (res.status === 200) {
             // commit(types.USERINFO, res.data);
@@ -113,7 +112,7 @@ export default {
     });
   },
 
-  //后台管理获取管理员信息（黄昌壹）
+  //后台管理获取管理员信息
   getAdminInfo({ commit }) {
     return new Promise((resolve, reject) => {
       adminInfo()
@@ -129,7 +128,7 @@ export default {
     });
   },
 
-  //后台管理获取用户信息（黄昌壹）
+  //后台管理获取用户信息
   getUsersInfo({ commit }, info) {
     return new Promise((resolve, reject) => {
       UsersInfo(info)
@@ -145,7 +144,7 @@ export default {
     });
   },
 
-  //删除管理员（黄昌壹）
+  //删除管理员
   doDeleteAdmin({ commit }, info) {
     return new Promise((resolve, reject) => {
       DeleteAdmin(info)
@@ -161,7 +160,7 @@ export default {
     });
   },
 
-  //删除用户（黄昌壹）
+  //删除用户
   doDeleteUser({ commit }, info) {
     return new Promise((resolve, reject) => {
       DeleteUser(info)
@@ -177,7 +176,7 @@ export default {
     });
   },
 
-  //修改管理员信息（黄昌壹）
+  //修改管理员信息
   doEditAdminInfo({ commit }, info) {
     return new Promise((resolve, reject) => {
       EditAdminInfo(info)
@@ -193,7 +192,7 @@ export default {
     });
   },
 
-  //修改用户信息（黄昌壹）
+  //修改用户信息
   doEditUserInfo({ commit }, info) {
     return new Promise((resolve, reject) => {
       EditUserInfo(info)
@@ -209,7 +208,7 @@ export default {
     });
   },
 
-  //添加管理员（黄昌壹）
+  //添加管理员
   doAddAdmin({ commit }, info) {
     return new Promise((resolve, reject) => {
       AddAdmin(info)
@@ -225,7 +224,7 @@ export default {
     });
   },
 
-  //添加用户（黄昌壹）
+  //添加用户
   doAddUser({ commit }, info) {
     return new Promise((resolve, reject) => {
       AddUser(info)
@@ -241,7 +240,7 @@ export default {
     });
   },
 
-  //黄昌壹
+  
   getAdmin({ commit }) {
     return new Promise((resolve, reject) => {
       getUserInfo()
@@ -259,7 +258,7 @@ export default {
     });
   },
 
-  //后台管理系登录(黄昌壹)
+  //后台管理系登录
   toAdminLogin({ commit }, info) {
     return new Promise((resolve, reject) => {
       adminlogin(info)
@@ -282,7 +281,7 @@ export default {
         });
     });
   },
-// 退出登录（丘桂娴）
+// 退出登录
   logOut({ commit }) {
     return new Promise((resolve, reject) => {
       commit(types.USERINFO, null);

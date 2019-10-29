@@ -6,7 +6,7 @@ import Qs from 'qs'
 import errorinfo from '../components/error'
 //跨域请求设置
 if (window.sessionStorage.getItem('token')) {
-  // console.log("丘桂娴api/index")
+ 
   Axios.defaults.headers ={
     // token中的默认头
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -36,7 +36,7 @@ instance.interceptors.response.use(
         path: '*'
       })
       vuex.commit(types.ERRORSTATUS,error.response.status);
-      // console.log(error.response.status+"丘桂娴333")
+
     }
     // 返回接口错误信息
     return Promise.reject(error.response)
@@ -67,14 +67,14 @@ export const getUserInfo = () => {
   
 }
 
-// 注册（丘桂娴）
+// 注册
 export const register = ({ registerUser, registerPassword,registerEmail }) => {
   let data = {
       "username": registerUser,
       "password": registerPassword,
       "email":registerEmail
   }
-  // console.log(data+"丘桂娴");
+
   console.log(Qs.stringify(data)+"数据传递");
   
   return instance({
@@ -103,7 +103,7 @@ export const checkEmail = ({ checkEmail }) => {
 
 
 
-//编辑管理员信息数据传给后端，请求处理（黄昌壹）
+//编辑管理员信息数据传给后端，请求处理
 export const EditAdminInfo = ({ formInfo }) => {
   let data = {
     formInfo: formInfo
@@ -115,7 +115,7 @@ export const EditAdminInfo = ({ formInfo }) => {
   });
 };
 
-//编辑用户信息数据传给后端，请求处理（黄昌壹）
+//编辑用户信息数据传给后端，请求处理
 export const EditUserInfo = ({ formInfo }) => {
   let data = {
     formInfo: formInfo
@@ -127,18 +127,18 @@ export const EditUserInfo = ({ formInfo }) => {
   });
 };
 
-//向后端请求管理员信息（黄昌壹)
+//向后端请求管理员信息
 export const adminInfo = () => {
   return instance.post("/api/getAdminInfo", {});
 };
 
-//向后端请求用户信息（黄昌壹)
+//向后端请求用户信息
 export const UsersInfo = () => {
   return instance.post("/api/getUsersInfo", {});
 };
 
 
-//管理员登录数据传给后端，请求处理(黄昌壹)
+//管理员登录数据传给后端，请求处理
 export const adminlogin = ({ adminLoginUser, adminLoginPassword }) => {
   let data = {
     adminUser: adminLoginUser,
@@ -152,7 +152,7 @@ export const adminlogin = ({ adminLoginUser, adminLoginPassword }) => {
   });
 };
 
-//增加管理员信息数据传给后端，请求处理（黄昌壹）
+//增加管理员信息数据传给后端，请求处理
 export const AddAdmin=({formInfo})=>{
   let data={
     formInfo:formInfo,
@@ -164,7 +164,7 @@ export const AddAdmin=({formInfo})=>{
   });
 }
 
-//增加用户信息数据传给后端，请求处理（黄昌壹）
+//增加用户信息数据传给后端，请求处理
 export const AddUser=({formInfo})=>{
   let data={
     formInfo:formInfo,
@@ -176,7 +176,7 @@ export const AddUser=({formInfo})=>{
   });
 }
 
-//删除管理员信息数据传给后端，请求处理（黄昌壹）
+//删除管理员信息数据传给后端，请求处理
 export const DeleteAdmin=({formInfo})=>{
   let data={
     formInfo:formInfo,
@@ -188,7 +188,7 @@ export const DeleteAdmin=({formInfo})=>{
   });
 }
 
-//删除用户信息数据传给后端，请求处理（黄昌壹）
+//删除用户信息数据传给后端，请求处理
 export const DeleteUser=({formInfo})=>{
   let data={
     formInfo:formInfo,

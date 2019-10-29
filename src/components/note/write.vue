@@ -1,5 +1,3 @@
-<!--By：吴玉梅 功能：添加与发布笔记-->
-
 <template>
   <div>
       <div id="header">

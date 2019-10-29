@@ -1,4 +1,3 @@
-<!-- by:江健霞-->
 <template>
   <div id="register">
     <div id="header">

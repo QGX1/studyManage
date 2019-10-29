@@ -42,7 +42,6 @@ import { MessageBox } from 'mint-ui';
       }
     },
     methods: {
-      // 注册（江建霞写，丘桂娴改）
       signup() {
         var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //正则表达式
         if (this.username && this.password && this.email === '') {
@@ -98,7 +97,7 @@ import { MessageBox } from 'mint-ui';
             }
 
             if (res.data.user[0].role_id !== 3) {
-              //登录者身份判断，非普通用户不能登陆手机端页面（黄昌壹）
+              //登录者身份判断，非普通用户不能登陆手机端页面
               let redirectUrl = decodeURIComponent(
                 this.$route.query.redirect || "/"
               );
@@ -133,7 +132,6 @@ import { MessageBox } from 'mint-ui';
           });
       }
     },
-    //邮箱判断(江健霞写 丘桂娴修改)
     prompt() {
        MessageBox.prompt('请输入邮箱' ,  {
           confirmButtonText: '确定',

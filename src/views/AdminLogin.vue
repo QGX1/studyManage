@@ -1,4 +1,3 @@
-<!--autor:刘炽辉-->  <!--后台管理登录页面-->  
 <template>
     <div class="login-container">
         <el-form :model="ruleForm2" :rules="rules2" 
@@ -47,7 +46,7 @@ export default {
     };
   },
   methods: {
-    handleSubmit(event) {//添加表单信息（黄昌壹）
+    handleSubmit(event) {//添加表单信息
       var self = this;
       self.$refs.ruleForm2.validate(valid => {
         if (valid) {
@@ -55,7 +54,7 @@ export default {
           //登陆成功后跳转到主页面
           try {
             self.$store
-              .dispatch("toAdminLogin", {//管理员登录（黄昌壹）
+              .dispatch("toAdminLogin", {//管理员登录
                 adminLoginUser: self.ruleForm2.username,
                 adminLoginPassword: self.ruleForm2.password
               })

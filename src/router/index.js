@@ -38,7 +38,7 @@ const router = new Router({
       component: login,
       beforeEnter: (to, from, next) => {
         let token = window.sessionStorage.getItem("token");
-        // console.log('黄昌壹'+token);
+        
 
         if (token) {
           next("/home");
@@ -92,7 +92,6 @@ const router = new Router({
       beforeEnter: (to, from, next) => {
         let token = window.sessionStorage.getItem("token");
         if (token) {
-          console.log("丘桂娴" + token);
           next("/home");
         } else {
           next();
